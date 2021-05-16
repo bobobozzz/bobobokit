@@ -14,7 +14,4 @@ Command and configuration that frequently-used.
 
 ### code
 
-Util code that you can use directly.
-It will be used as code not as library or direct command.
-
-## So bobobokit is growing continuously, not changing by version.
+Code that works.
