@@ -1,6 +1,26 @@
-# Pratical Vim
+## files
 
-Edit Text at the Speed of Thought.
+    gzip -dc myfile.gz | grep abc
+    diff -rq  <path> <path> > difftxt
+    find . -size +100M
+    find . -path './ignore' -prune -o -type f
+    grep 'model name' /proc/cpuinfo | wc -l
+    grep -ABC
+    grep -v
+
+## sed
+
+    sed -i "" 's/webmobileapi\.bainianaolai\.com/m\.bainianaolai\.com/g' `grep "webmobileapi.bainianaolai.com" -rl .`
+
+## awk
+
+    awk -F "[分隔符 分隔符]" '{print $1,"=",$2;}' filename
+
+## Vim
+
+    1. 以思考的速度编辑.
+    2. 一键移动, 一键执行.
+
 
     :so $MYVIMRC
     :e ++enc=gbk
@@ -12,15 +32,14 @@ Edit Text at the Speed of Thought.
     %:r 无扩展名的文件名.例如../path/test就会成为test
     %:e 扩展名
 
+    ctrl+v：矩形选择
 
     /<search string>\c
     :%s/\(world\), change \(mind\)/\2, change \1/g
     :%s/_\([a-z]\)/\U\1/g
     let i=997|g/abcdefg/s//\=i/|let i=i-1
 
-## ctrl+v：矩形选择
-
-## command
+#### command
     .(范式)
     ; , n N
     & @:
@@ -51,6 +70,8 @@ Edit Text at the Speed of Thought.
 ```
 
 ## cscope:
+
+cscope -Rbq
 
 :cs find {querytype} {name}
 

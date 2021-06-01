@@ -17,18 +17,6 @@
     fg %<number>
     bg %<number>
 
-    diff -rq  <path> <path> > difftxt
-    find . -size +100M
-    find . -path './ignore' -prune -o -type f
-    grep 'model name' /proc/cpuinfo | wc -l
-    grep -ABC
-    grep -v
-    awk -F "[分隔符 分隔符]" '{print $1,"=",$2;}' filename
-    sed -i "" 's/webmobileapi\.bainianaolai\.com/m\.bainianaolai\.com/g' `grep "webmobileapi.bainianaolai.com" -rl .`
-    gzip -dc myfile.gz | grep abc
-
-    curl -d 'jsondata={"uid":"324","valid_flag":1}' "http://api.customer.liangcheng.idc/memberlq/api/customer/updateVipUserStatus.aj" -X POST
-
     firewall-cmd --add-port=20070/tcp --permanent
     firewall-cmd --reload
     firewall-cmd --zone=public --add-port=80/tcp --permanent
@@ -36,7 +24,7 @@
 
     tcpdump -X -i lo0 'port 8000'
 
-    cscope -Rbq
+    curl -d 'jsondata={"uid":"324","valid_flag":1}' "http://api.customer.liangcheng.idc/memberlq/api/customer/updateVipUserStatus.aj" -X POST
 
 ## Docker
 
@@ -96,13 +84,18 @@
 
     sudo /usr/local/mysql/support-files/mysql.server start
 
-## Mac
+## Python
 
-    sudo spctl --master-disable
+    python setup.py sdist build
+    twine upload dist/*
 
 ## Spring
 
     spring init -dweb,data-jpa,h2,thymeleaf --build maven demo
+
+## Mac
+
+    sudo spctl --master-disable
 
 ## Item2
 
@@ -110,7 +103,29 @@
 
     输入command+shift+h，iterm2将自动列出剪切板的历史记录。
 
-## Python
+## zsh
 
-    python setup.py sdist build
-    twine upload dist/*
+    alias cmdname=""
+    alias -s gz="tar -xzvf"
+
+    d .. ...
+    cd -
+    z (-l str)
+    cd /U/b/c
+
+    ls -l **/*.sh
+    kill emacs <tab>
+
+## Tmux
+
+    tmux new -s <session-name>
+    tmux detach
+    tmux attach/kill-session/switch -t <session-name>
+    tmux split-window (-h)
+    tmux select-pane (-U/D/L/R)
+
+    tmux list-keys
+    tmux list-commands
+    tmux info
+    tmux ls 
+    tmux source-file ~/.tmux.conf
