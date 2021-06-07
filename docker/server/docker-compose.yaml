@@ -15,6 +15,9 @@ services:
     container_name: dev.mysql
     environment:
       - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+      - MYSQL_DATABASE=db_test
+      - MYSQL_USER=test
+      - MYSQL_PASSWORD=test
     volumes:
       - ./mysql_init:/docker-entrypoint-initdb.d
     ports:
@@ -22,7 +25,7 @@ services:
  
   redis:
     image: redis:6.0.5-alpine
-    container_name: redis.iuser
+    container_name: dev.redis
     ports:
       - "6379:6379"
 

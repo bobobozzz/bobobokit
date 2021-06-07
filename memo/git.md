@@ -38,6 +38,8 @@
 
     显示当前分支的版本历史
     git log
+    git log --oneline --decorate --graph --all
+    git log --graph --decorate --oneline --simplify-by-decoration --all
 
     查看命令历史
     git reflog
