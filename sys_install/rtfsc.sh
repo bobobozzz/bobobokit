@@ -47,7 +47,8 @@ gitclone https://github.com/reactor/reactor-core.git $dir_rtfsc/reactor-core
 gitclone https://github.com/netty/netty.git $dir_rtfsc/netty
 gitclone https://github.com/spring-projects/spring-framework.git $dir_rtfsc/spring-framework
 #gitclone https://github.com/spring-projects/spring-data-redis.git $dir_rtfsc/spring-data-redis
-#gitclone https://github.com/spring-projects/spring-batch.git $dir_rtfsc/spring-batch
+gitclone https://github.com/spring-projects/spring-batch.git $dir_rtfsc/spring-batch
+gitclone https://github.com/spring-guides/gs-batch-processing.git $dir_rtfsc/example/gs-batch-processing
 #gitclone https://github.com/spring-projects/spring-data-jpa.git $dir_rtfsc/spring-data-jpa
 #gitclone https://github.com/spring-projects/spring-integration.git $dir_rtfsc/spring-integration
 #gitclone https://github.com/apache/commons-pool.git $dir_rtfsc/commons-pool
