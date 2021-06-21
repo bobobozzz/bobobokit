@@ -101,7 +101,11 @@ git remote add upstream git@github.com:xxx/xxx.git
 git fetch upstream
 git merge upstream/master
 
-
+git init
+git remote add -f origin https://github.com/XXXXX/test.git    #拉取remote的all objects信息
+git config core.sparsecheckout true   #开启sparse clone
+echo "build" >> .git/info/sparse-checkout   #设置需要pull的目录，*表示所有，!表示匹配相反的
+git pull origin master  #拉取
 ```
 
 ## SVN
