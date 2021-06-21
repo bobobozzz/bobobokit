@@ -55,6 +55,13 @@
     d/{str}
     vi} va}
 
+#### vimrc
+
+    autocmd BufWritePost *.md call MdToHtml()
+    function! MdToHtml()
+        exec "!pandoc -f markdown --metadata pagetitle=Markdown --to=html5 --highlight-style=haddock --self-contained -c $HOME/markdown-css/github.css % -o %.html"
+    endfunction
+
 
 ## vimdiff:
 
