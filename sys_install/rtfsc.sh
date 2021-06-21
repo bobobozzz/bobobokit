@@ -12,6 +12,7 @@ gitclone(){
 
 gitclone https://github.com/loveveryday/linux0.11.git $dir_rtfsc/linux0.11
 gitclone https://github.com/vim/vim.git $dir_rtfsc/vim
+gitclone https://github.com/honza/vim-snippets.git $dir_rtfsc/vim-snippets
 
 gitclone https://github.com/nginx/nginx.git $dir_rtfsc/nginx
 gitclone https://github.com/arut/nginx-python-module.git $dir_rtfsc/nginx-python-module
@@ -26,6 +27,7 @@ gitclone https://github.com/redis/redis.git $dir_rtfsc/redis
 gitclone https://github.com/kachayev/fn.py.git $dir_rtfsc/fn
 gitclone https://github.com/tornadoweb/tornado.git $dir_rtfsc/tornado
 gitclone https://github.com/pallets/flask.git $dir_rtfsc/flask
+gitclone https://github.com/django/django.git $dir_rtfsc/django
 gitclone https://github.com/cyberdelia/flask-mysql.git $dir_rtfsc/flask-mysql
 gitclone https://github.com/bottlepy/bottle.git $dir_rtfsc/bottle
 gitclone https://github.com/mahmoud/clastic.git $dir_rtfsc/clastic
