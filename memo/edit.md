@@ -39,6 +39,8 @@
     :%s/_\([a-z]\)/\U\1/g
     let i=997|g/abcdefg/s//\=i/|let i=i-1
 
+    :noh
+
 #### command
     .(范式)
     ; , n N

@@ -63,6 +63,9 @@ gitclone https://github.com/spring-guides/gs-batch-processing.git $dir_rtfsc/exa
 
 gitclone https://github.com/mui-org/material-ui.git $dir_rtfsc/material-ui
 
+gitclone https://github.com/openscad/openscad.git $dir_rtfsc/openscad
+
+### Examples
 gitclone https://github.com/lingthio/Flask-User.git $dir_rtfsc/example/Flask-User
 gitclone https://github.com/Alexmod/Flask-User-and-Flask-admin.git $dir_rtfsc/example/Flask-User-and-Flask-admin
 gitclone https://github.com/webcpp/pyexample.git $dir_rtfsc/example/pyexample
