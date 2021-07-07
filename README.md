@@ -4,7 +4,7 @@
 
 Some Dockerfile and docker-compose file that frequently-used.
 
-### sys_install
+### install
 
 Auto install scripts for installing tools on os system (MacOS mainly).
 
@@ -12,6 +12,6 @@ Auto install scripts for installing tools on os system (MacOS mainly).
 
 Command and configuration that frequently-used.
 
-### code
+### boboboscript
 
-Code that works.
+Code that works directly.
