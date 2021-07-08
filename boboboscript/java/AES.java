@@ -4,7 +4,7 @@ import java.util.Base64;
 import javax.crypto.*;
 import javax.crypto.spec.*;
 
-public class Main {
+public class AES {
     public static void main(String[] args) throws Exception {
         // 原文:
         String message = "Hello, world!";

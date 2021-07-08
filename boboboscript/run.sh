@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 
 # BoBoBo
 
@@ -40,7 +40,7 @@ if [ "${script_conf}" != "" ]; then
 fi
 
 if [ "${script_params}" != "" ]; then
-    add_cmd_last_part "-p" "${script_params//::/ }"
+    add_cmd_last_part "-p" "${script_params//,/ }"
 fi
 
 if [ -d ./env/bobobokit-venv ]; then
@@ -52,6 +52,10 @@ else
     pip install -r ./env/py-requirements.txt
 fi
 
-python ./${target} ${cmd_last_part}
+if echo "${target}" | grep -q -E '\.py$'
+then
+    target="python/"${target}
+    python ./${target} ${cmd_last_part}
+fi
 
 cd ${curdir}
