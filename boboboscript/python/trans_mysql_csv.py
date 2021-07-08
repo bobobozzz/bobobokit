@@ -9,7 +9,7 @@ from boboboscript.common.args import parse_args
 from boboboscript.common.ini import get_conf
 
 
-def transform(args):
+def trans(args):
     conf = get_conf(args.ini, "mysql")
 
     conn = pymysql.connect(host=conf('host'), port=conf('port'), db=conf(
@@ -17,8 +17,8 @@ def transform(args):
 
     output_file = args.params[0]
     filewriter = csv.writer(open(output_file, 'w', newline=''), delimiter=',')
-    header = conf('header').split(',')
-    filewriter.writerow(header)
+    headers = conf('headers').split(',')
+    filewriter.writerow(headers)
 
     with conn.cursor() as cursor:
         cursor.execute(conf('query_sql'))
@@ -29,5 +29,5 @@ def transform(args):
 
 if __name__ == "__main__":
     args = parse_args(
-        sys.argv, "transform_mysql_csv.py -c <config file> -p <output file>")
-    transform(args)
+        sys.argv, "trans_mysql_csv.py -c <config file> -p <output file>")
+    trans(args)
