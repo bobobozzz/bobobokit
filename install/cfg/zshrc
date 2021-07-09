@@ -13,8 +13,6 @@ plugins=(git autojump)
 
 alias tree="find . ! -path '*svn*' ! -path '*lib*' ! -path '*target*' ! -path '*class' ! -path '*pyc' ! -path '*idea*' ! -path '*swp' ! -path '*iml' | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 
-export PATH="${HOME}/code/bobobokit/src/shell:$PATH"
-
 export LC_ALL=en_US.UTF-8  
 export LANG=en_US.UTF-8
 
@@ -22,9 +20,12 @@ export JAVA_HOME=/usr/local/opt/openjdk/libexec/openjdk.jdk/Contents/Home/
 #export JAVA_OPTS="-Xdebug -Xrunjdwp:transport=dt_socket,address=8008,server=y,suspend=y"
 export JRE_HOME=${JAVA_HOME}/jre
 export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib
-
-export PYTHONPATH=${HOME}/code
-
-export PATH="${HOME}/maven/bin:$PATH"
 export MAVEN_OPTS="-Xms1024m -Xmx3024m"
-export PATH=/usr/local/Cellar/mysql-client/8.0.18/bin:$PATH
+
+export PATH=${HOME}/maven/bin:$PATH
+export PATH=${HOME}/code/bobobokit/boboboscript:$PATH
+export PATH=/usr/local/Cellar/mysql-client/8.0.23/bin:$PATH
+
+export OPENSSL_ROOT_DIR=/usr/local/opt/openssl@1.1
+export CMAKE_PREFIX_PATH=/usr/local/opt/qt@5
+export PATH=/Library/Apple/usr/bin:/usr/local/opt/qt@5/bin:$PATH

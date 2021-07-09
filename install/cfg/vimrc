@@ -8,7 +8,6 @@ Plugin 'Tagbar'
 Plugin 'SimpylFold'
 Plugin 'ctrlp.vim'
 Plugin 'SirVer/ultisnips'
-Plugin 'bobobozzz/vim-snippets'
 Plugin 'axiaoxin/vim-json-line-format'
 Plugin 'xml.vim'
 Plugin 'aklt/plantuml-syntax'
@@ -53,6 +52,7 @@ let g:UltiSnipsExpandTrigger="<c-l>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 let g:UltiSnipsEditSplit="vertical"
+let g:UltiSnipsSnippetDirectories=["bobobokit/snippets"]
 
 let g:ctrlp_working_path_mode = '0'
 
@@ -90,12 +90,12 @@ highlight PMenuSel ctermfg=242 ctermbg=8 guifg=darkgrey guibg=black
 
 autocmd BufWritePost *.md call MdToHtml()
 function! MdToHtml()
-    exec "!pandoc -f markdown --metadata pagetitle=Markdown --to=html5 --highlight-style=haddock --self-contained -c $HOME/markdown-css/github.css % -o %.html"
+    exec "!pandoc -f markdown --metadata pagetitle=Markdown --to=html5 --highlight-style=haddock --self-contained -c $HOME/markdown-css/github.css % -o ~/Desktop/work/%:t.html"
 endfunction
 
 autocmd BufWritePost *.dot call DotToPng()
 function! DotToPng()
-    exec "!dot -Tpng % -o %:t.png"
+    exec "!dot -Tpng % -o ~/Documents/work/%:t.png"
 endfunction
 
 autocmd BufWritePost *.plantuml call PlantumlToPng()
