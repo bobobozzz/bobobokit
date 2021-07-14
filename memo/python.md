@@ -63,6 +63,30 @@
 	pattern = re.compile(pattern_r, re.X)
 	pattern.search(s).groups()
 
+    ########## 
+    m = re.match(r'(\w+) (\w+)(?P<sign>.*)', 'hello world!')
+    # m.string: hello world!
+    # m.re: <_sre.SRE_Pattern object at 0x016E1A38>
+    # m.pos: 0
+    # m.endpos: 12
+    # m.lastindex: 3
+    # m.end(2): 11
+    # m.lastgroup: sign
+    # m.group(1,2): ('hello', 'world')
+    # m.groups(): ('hello', 'world', '!')
+    # m.groupdict(): {'sign': '!'}
+    # m.start(2): 6
+    # m.span(2): (6, 11)
+    # m.expand(r'\2 \1\3'): world hello!
+
+    p = re.compile(r'(\w+) (\w+)(?P<sign>.*)', re.DOTALL)
+    # p.pattern: (\w+) (\w+)(?P<sign>.*)
+    # p.flags: 16
+    # p.groups: 3
+    # p.groupindex: {'sign': 3}
+    ##########
+     
+
 	re.match(pattern, string, flags=0)	从字符串的起始位置匹配，如果起始位置匹配不成功的话，match()就返回none
 	re.search(pattern, string, flags=0)	扫描整个字符串并返回第一个成功的匹配
 	re.findall(pattern, string, flags=0)	找到RE匹配的所有字符串，并把他们作为一个列表返回
